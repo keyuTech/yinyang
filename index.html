@@ -6,15 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>太极图</title>
   <style>
+    body {
+      background-color: #777;
+    }
+    @keyframes whirl{
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
     #yin-yang {
       width: 48px;
       height: 96px;
+      margin: 50px auto;
       background: #fff;
       border-color: #000;
       border-width: 2px 2px 2px 50px;
       border-style: solid;
       border-radius: 50%;
       position: relative;
+      animation-name: whirl;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
     }
     #yin-yang::before {
       content: '';
@@ -38,17 +54,22 @@
       width: 12px;
       height: 12px;
     }
+
     #yin-yang1 {
       width: 96px;
       height: 48px;
+      margin: 50px auto;
       background: #eee;
       border-color: black;
       border-style: solid;
       border-width: 2px 2px 50px 2px;
       border-radius: 100%;
       position: relative;
+      animation-name: whirl;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
     }
-
     #yin-yang1:before {
       content: "";
       position: absolute;
@@ -60,7 +81,6 @@
       width: 12px;
       height: 12px;
     }
-
     #yin-yang1:after {
       content: "";
       position: absolute;
@@ -72,6 +92,7 @@
       width: 12px;
       height: 12px;
     }
+
   </style>
 </head>
 <body>
